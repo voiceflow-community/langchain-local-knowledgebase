@@ -135,6 +135,11 @@ app.post('/api/add', async (req, res) => {
     res.status(500).json({ message: 'Missing URL' })
     return
   }
+  // SSRF mitigation: validate url
+  if (!isValidUrlForFetch(url)) {
+    res.status(400).json({ message: 'Invalid or forbidden URL.' })
+    return
+  }
 
   let encodedCollection = await sanitize(collection)
   let type = getFileType(url)
