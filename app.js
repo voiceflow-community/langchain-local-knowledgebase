@@ -487,7 +487,7 @@ async function parseSitmap(url, filter, limit) {
 
   return sitemapXMLParser.fetch().then((result) => {
     let list = result
-      .map((item) => item.loc[0].trim().replace(/\r\n/g, ' '))
+      .map((item) => item.loc.trim().replace(/\r\n/g, ' '))
       .filter((item) => !filter || item.includes(filter))
     return limit ? list.slice(0, limit) : list
   })
