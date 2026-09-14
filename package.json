@@ -13,7 +13,7 @@
   "dependencies": {
     "@opensearch-project/opensearch": "^2.7.0",
     "@zilliz/milvus2-sdk-node": "^2.4.1",
-    "axios": "^0.26.1",
+    "axios": "^0.33.0",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
@@ -21,6 +21,10 @@
     "openai": "^3.2.1",
     "pdf-parse": "^1.1.1",
     "redis": "^4.6.13",
-    "sitemap-xml-parser": "^0.0.2"
+    "sitemap-xml-parser": "^1.4.1"
+  },
+  "resolutions": {
+    "axios": "0.33.0",
+    "qs": "6.16.0"
   }
 }
